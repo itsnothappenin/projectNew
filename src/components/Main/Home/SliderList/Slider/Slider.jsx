@@ -5,7 +5,7 @@ const Slider = (props) => {
     return (
         <div>
             {
-                <img src={slider.id} alt="" />
+              <h1>{slider._id}</h1>
             }
         </div>
     )
