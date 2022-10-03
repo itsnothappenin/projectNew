@@ -30,10 +30,16 @@ const Header = () => {
         <Link to="/cart">
           <img className="cart" src={cart} alt="" />
         </Link>
-        <Link to="/login">
-          <img className="user" src={user} alt="" />
-        </Link>
-        {/* burda loginin altinda shey achilmalidi */}
+        <div className='dropwdown'>
+          <div className='dropdownBtn'>
+            <button className='user__btn'><img className="user" src={user} alt="" /></button>
+          </div>
+          <div className='dropdownContent'>
+            <Link className='linkStyles' to="/account">My account</Link>
+            <br />
+            <Link className='linkStyles' to="/login">Sign out</Link>
+          </div>
+        </div>
       </div>
     </div>
   )

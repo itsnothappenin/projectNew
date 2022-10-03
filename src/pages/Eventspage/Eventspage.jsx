@@ -1,8 +1,19 @@
+import Events from '../../components/Main/Eventspage/Events/Events';
+import Filtering from '../../components/Main/Eventspage/Filtering/Filtering';
 import './Eventspage.css'
 
-function Eventspage () {
+
+function Eventspage() {
     return (
-        'salam'
+        <>
+            <div className='title'>
+                <h1>All Events</h1>
+            </div>
+            <Filtering />
+            <Events />
+        </>
+
+
     )
 }
 

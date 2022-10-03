@@ -4,6 +4,10 @@ import Footer from './components/Footer/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home/Home';
 import Eventspage from './pages/Eventspage/Eventspage';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import Eventcard from './components/Main/Eventspage/Events/Eventcard/Eventcard';
+import EventDetail from './pages/Eventspage/Detail/EventDetail';
 
 
 function App() {
@@ -14,6 +18,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Eventspage />} />
+            <Route path="/events/:id" element={<EventDetail />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         <Footer />
       </BrowserRouter>
