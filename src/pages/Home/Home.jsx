@@ -14,7 +14,7 @@ const Home = () => {
             <SliderList />
             <SliderList2 />
             <DiscoveryEvents />
-            <Footer />
+            <Footer />  
         </div>
     )
 }

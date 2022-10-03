@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import axios, { Axios } from 'axios'
 import { toast, Toaster } from 'react-hot-toast'
 import { useEffect } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 function Login() {
 
     const [email, setEmail] = useState('')
@@ -13,6 +13,7 @@ function Login() {
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
     const [users, setUsers] = useState([]);
+    const navigate = useNavigate();
     useEffect(() => {
         axios.get("http://localhost:8080/users")
             .then(res => setUsers(res.data))
@@ -28,15 +29,19 @@ function Login() {
                 password: password
             }
         }).then(res => {
+            console.log(res)
             if (res.status == 200) {
-                toast.success("Welcome")
-                window.location.href("http://localhost:3000/")
-            }
-            else if (res.status == 401) {
-                toast.error("Something went wrong")
-            }
-        });
+                setInterval(() => {
+                    navigate("/")
 
+                }, 3000);
+                toast.success("Welcome !")
+            }
+            else {
+            }
+        }).catch(err => {
+            toast.error("invalid email or password")
+        })
     }
 
     return (
