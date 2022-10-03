@@ -20,6 +20,7 @@ function SliderList() {
             .then(res => res.json())
             .then(function (data) {
                 setSwipers(data.data)
+                console.log("sakla")
             })
     }, [])
     return (
