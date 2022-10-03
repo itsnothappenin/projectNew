@@ -3,6 +3,8 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Footer from '../../../components/Footer/Footer'
+import Header from '../../../components/Header/Header'
 
 const EventDetail = () => {
     const [events, setEvents] = useState([])
@@ -17,6 +19,8 @@ const EventDetail = () => {
     }, [])
 
     return (
+        <>
+        <Header />
         <div className='event__card'>
             <div className="event__card__image">
                 <img src={event.eventImage} alt="" />
@@ -27,6 +31,8 @@ const EventDetail = () => {
                 <h2>{event.price}AZN</h2>
             </div>
         </div>
+        <Footer />
+        </>
     )
 }
 
