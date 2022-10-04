@@ -23,20 +23,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-<<<<<<< HEAD
-=======
-        <Header />
->>>>>>> 637f14a77b9dd5a9b35fbd858ac140534dad0f9a
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/events" element={<Eventspage />} />
-          <Route path="/events/:id" element={<EventDetail />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-<<<<<<< HEAD
-        </Routes>
-=======
           <Route path="/news" element={<News />} />
+          <Route path="/events" element={<Eventspage />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/support" element={<Support />} />
@@ -47,10 +37,9 @@ function App() {
           <Route path="/eticket" element={<Eticket />} />
           <Route path="/News" element={<News />} />
           <Route path="/News/:id" element={<NewsDetails />} />
-        </Routes>
+        </Routes >
         <Footer />
->>>>>>> 637f14a77b9dd5a9b35fbd858ac140534dad0f9a
-      </BrowserRouter>
+      </BrowserRouter >
     </div>
   );
 }
