@@ -3,7 +3,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import Blog from "../../components/Main/News/Blog/Blog";
+import Blog from "../../components/News/Blog/Blog";
 import "./NewsDetails.css";
 
 function NewsDetails() {
