@@ -7,9 +7,8 @@ const NewsCard = ({ item }) => {
   return (
     <Link to={`/news/${item.id}`} className="linkcard">
       <div className="card">
-        {/* <Link to={`/news/${item._id}`} className="linkcard"> */}
         <div className="image-container">
-          <img src={item.thumbnail} alt="" />
+          {/* <img src={item.thumbnail} alt="" /> */}
         </div>
         <div className="card-content">
           <div className="card-title">
@@ -24,7 +23,6 @@ const NewsCard = ({ item }) => {
             <p>{item.description}</p>
           </div>
         </div>
-        {/* </Link> */}
         <div className="btn">
           <button>
             <a>READ MORE</a>

@@ -10,7 +10,7 @@ function NewsDetails() {
   const [news, setNews] = useState([]);
   let id = useParams();
   useEffect(() => {
-    axios.get("https://dummyjson.com/products").then((res) => {
+    axios.get("http://localhost:8080").then((res) => {
       setNews(res.data.products.find((x) => x.id == id.id));
     });
   });
