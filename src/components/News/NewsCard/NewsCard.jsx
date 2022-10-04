@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const NewsCard = ({ item }) => {
   console.log(item);
   return (
-    <Link to={`/news/${item.id}`} className="linkcard">
+    <Link to={`/news/${item._id}`} className="linkcard">
       <div className="card">
         <div className="image-container">
           {/* <img src={item.thumbnail} alt="" /> */}

@@ -4,30 +4,52 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Blog from "../../components/News/Blog/Blog";
+import { toast, Toaster } from "react-hot-toast";
 import "./NewsDetails.css";
-
+import { useNavigate } from "react-router-dom";
 function NewsDetails() {
   const [news, setNews] = useState([]);
+  const navigator = useNavigate();
+  const [currentNews, setCurrentNews] = useState({});
   let id = useParams();
   useEffect(() => {
-    axios.get("http://localhost:8080").then((res) => {
-      setNews(res.data.products.find((x) => x.id == id.id));
+    axios.get("http://localhost:8080/news").then((res) => {
+      setNews(res.data.data);
+      setCurrentNews(res.data.data.find((x) => x._id == id.id));
     });
-  });
+  }, []);
+  const prevHandler = () => {
+    let index = news.indexOf(currentNews);
+    if (index == 0) {
+      toast.error("Evvel news yoxdur");
+      return;
+    }
+  };
+  const nextHandler = () => {
+    let index = news.indexOf(currentNews);
+    let newIndex = index + 1;
+    console.log(newIndex);
+    console.log(news);
+    const nextNews = news.splice(newIndex, 1)[0];
+    console.log(nextNews._id);
+    navigator(`/news/${nextNews._id}`);
+  };
+
   return (
     <div className="cardDetail-comment">
       <Blog />
       <div className="cardDetail">
+        {currentNews._id}
         <div className="cardDetail-Image-container">
-          <img src={news.thumbnail} alt="img" />
+          <img src={currentNews.newsimage} alt="img" />
         </div>
         <div className="cardDetail-content">
           <div className="cardDetail-title">
-            <h5>GRAVIDA SUSCIPIT PLATEA LAOREET PRAESENT FEUGIAT MALESUADA</h5>
+            <h5>{currentNews.title}</h5>
           </div>
           <div className="cardDetail-general">
             <div className="cardDetail-Date">
-              <p>December 23, 2016</p>
+              <p>{currentNews.createdAt}</p>
             </div>
             <div className="cardDetail-By">
               <p>By Dawnthemes</p>
@@ -39,33 +61,7 @@ function NewsDetails() {
           </div>
           <hr />
           <div className="carddetail-Text">
-            <p>
-              Aside barring goodness shivered proofread bee frenetically coughed
-              earthworm much during rakish hey august while and yikes one oh
-              giraffe when magnificently darn far ouch much much conditionally.
-              Tranquilly egregious and blubbered dense this fed that a this some
-              horrendous volubly alas amid diligently where armadillo krill
-              apart belched much more hey authentically a ashamedly that within
-              one onto wow in. Dynamic far infallible oh ouch a and nefariously
-              inflexible vigorous a some wise forecast mysteriously foolhardy
-              that some because porcupine horse scooped where acutely
-              resplendent inside after regarding yikes wolf less so peskily
-              blinked. Tranquilly egregious and blubbered dense this fed that a
-              this some horrendous volubly alas amid diligently where armadillo
-              krill apart belched Aside barring goodness shivered proofread bee
-              frenetically coughed earthworm much during rakish hey august while
-              and yikes one oh giraffe when magnificently darn far ouch much
-              much conditionally. Tranquilly egregious and blubbered dense this
-              fed that a this some horrendous volubly alas amid diligently where
-              armadillo krill apart belched much more hey authentically a
-              ashamedly that within one onto wow in. Dynamic far infallible oh
-              ouch a and nefariously inflexible vigorous a some wise forecast
-              mysteriously foolhardy that some because porcupine horse scooped
-              where acutely resplendent inside after regarding yikes wolf less
-              so peskily blinked. Tranquilly egregious and blubbered dense this
-              fed that a this some horrendous volubly alas amid diligently where
-              armadillo krill apart belched
-            </p>
+            <p>{currentNews.description} </p>
           </div>
 
           <div className="socialmedia">
@@ -86,13 +82,13 @@ function NewsDetails() {
 
         <div className="previousNext">
           <div className="previousPost">
-            <button className="previousPost-btn">
+            <button className="previousPost-btn" onClick={prevHandler}>
               <p>previous post </p>
               <h5>NISI CRAS VEL APTENT DICTUM SEM SENECTUS VENENATIS</h5>
             </button>
           </div>
           <div className="nextPost">
-            <button className="nextPost-btn">
+            <button className="nextPost-btn" onClick={nextHandler}>
               <p>next post </p>
               <h5>NISI CRAS VEL APTENT DICTUM SEM SENECTUS VENENATIS</h5>
             </button>
@@ -139,6 +135,7 @@ function NewsDetails() {
           <button className="btn-comment">Post Comment </button>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 }
