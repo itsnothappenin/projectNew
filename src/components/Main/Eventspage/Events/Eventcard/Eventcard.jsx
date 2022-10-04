@@ -7,7 +7,11 @@ const Eventcard = ({event}) => {
                 <img src={event.eventImage} alt="" />
             </div>
             <div className="event__card__body">
-                <h2>{event.location}</h2>
+                <h2>{event.title}</h2>
+                <h4>{event.startTime}</h4>
+                <h4>{event.endTime}</h4>
+                <h4>{event.location}</h4>
+                <h2>{event.price}</h2>
             </div>
         </div>
     )

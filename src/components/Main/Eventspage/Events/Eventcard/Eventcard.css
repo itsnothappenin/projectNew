@@ -1,3 +1,11 @@
 .event__card{
-    border: solid;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: -1px 3px 10px 1px #000;
+
+}
+
+.event__card:hover {
+    box-shadow: -1px 3px 20px 5px #000;
 }
