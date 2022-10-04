@@ -1,6 +1,6 @@
 import React from "react";
-import Blog from "../../components/Main/News/Blog/Blog";
-import NewsCards from "../../components/Main/News/NewsCards/NewsCards";
+import Blog from "../../components/News/Blog/Blog";
+import NewsCards from "../../components/News/NewsCards/NewsCards";
 import "./News.css";
 
 function News() {
