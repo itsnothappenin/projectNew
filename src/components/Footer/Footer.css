@@ -47,10 +47,13 @@
     color: white !important;
 }
 
-.footer-part-2 {
+.footer-part-iki {
     padding: 20px;
-    ;
     color: white;
     background-color: #002B5B;
+}
+
+.footer-part-iki p {
     text-align: center;
+    margin: 0;
 }

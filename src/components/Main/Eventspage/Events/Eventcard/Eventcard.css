@@ -1,3 +1,19 @@
 .event__card{
-    border: solid;
+    border: none;
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.5s;
+    box-shadow: -1px 3px 10px 1px #000;
+    margin: 40px;
+    color: black;
+}
+
+.event__card:hover, .event__card:focus, .event__card:active {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 0px;
+    cursor:pointer;
+    color: black;
+}
+
+.event__card__body {
 }

@@ -1,12 +1,14 @@
-.cards {
+.home_cards {
     display: flex;
     flex-direction: row;
     width: auto;
     justify-content: space-around;
-    padding: 50px;
+    padding: 40px;
+    background-color: #fffcdf;
+    margin-top: 15px;
 }
 
-.card {
+.home_card {
     position: relative;
     display: flex;
     top: 0;
@@ -15,13 +17,13 @@
     transition: top ease 0.3s
 }
 
-.card img {
+.home_card img {
     width: 30px;
     margin-bottom:  10px;
     
 }
 
-.card:hover {
+.home_card:hover {
     cursor: pointer;
     top: -10px
 }

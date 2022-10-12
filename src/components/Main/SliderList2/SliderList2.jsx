@@ -21,8 +21,8 @@ function SliderList2() {
     }, [])
     return (
         <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
+            slidesPerView={4}
+            spaceBetween={20}
             slidesPerGroup={3}
             loop={true}
             loopFillGroupWithBlank={true}

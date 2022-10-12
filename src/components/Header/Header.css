@@ -6,6 +6,7 @@
 .menu {
   background-color: #026670;
   box-shadow: 1px 1px 20px 1px rgb(58, 58, 58);
+  position: relative;
 }
 
 .nese {
@@ -25,14 +26,37 @@
 }
 
 .navbar a {
+  font-size: 20px;
   text-decoration: none;
   color: white;
 }
 
-.navbar a:hover {
-  cursor: pointer;
-  text-decoration: underline;
+.navbar a{
+  /* the height */
+  --h: 1.2em;
+
+  line-height: var(--h);
+  text-shadow: 
+    0 var(--_t,var(--h)) #fffcdf,
+    0 0 var(--_c, #000);
+  background: 
+    linear-gradient(#9fedd7 0 0) 
+    bottom/100% var(--_d, 0) no-repeat;
+  overflow: hidden;
+  transition: 0.3s;
 }
+.navbar a:hover {
+  --_d: 100%;
+  --_t: 0;
+  --_c: #0000;
+}
+
+/* .navbar a:hover {
+  cursor: pointer;
+  border: none;
+  transition: all 0.1s;
+  box-shadow: -1px 3px 20px 5px white;
+} */
 
 .navbar img {
   width: 20px;

@@ -5,18 +5,18 @@ import ticket from './ticket-solid.svg'
 
 function Cards () {
     return (
-<div className="cards">
-    <div className="card">
+<div className="home_cards">
+    <div className="home_card">
         <img src={circle}/>
         <p className="p1">CHOOSE EVENTS AND TICKETS</p>
         <p className="p2">with only a few clicks</p>
     </div>
-    <div className="card">
+    <div className="home_card">
         <img src={cart}/>
         <p className="p1">BUY DIRECTLY FROM ORGANIZERS</p>
         <p className="p2">pay online or cash on delivery</p>
     </div>
-    <div className="card">
+    <div className="home_card">
         <img src={ticket}/>
         <p className="p1">RECIEVE TICKETS</p>
         <p className="p2">via email or right at your door</p>

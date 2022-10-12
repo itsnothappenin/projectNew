@@ -5,6 +5,7 @@ import { useState } from 'react'
 import './Filtering.css'
 
 const Filtering = () => {
+    const [query, setQuery] = useState('')
     const [events, setEvents] = useState([])
     useEffect(() => {
         axios.get("http://localhost:8080/events")
@@ -13,27 +14,26 @@ const Filtering = () => {
             })
     }, [])
     return (
-        <div className='filtering'>
-            <div className='venue'>
-                <select name="venue" id="venue" placeholder='Choose venue'>
-                    <option defaultValue="" className='none'>Choose venue</option>
-                    {
-                       events.map(event=>{
-                        return (
+        <>
+            <div className='filtering'>
+                <div className='venue' >
+                    <select name="venue" id="venue" placeholder='Choose venue'>
+                        <option defaultValue="" className='none'>Choose venue</option>
+                        {events.filter((data) => data.location.toLowerCase().includes(query)).map((event) => (
                             <option key={event._id}>{event.location}</option>
-                        )
-                       })
-                    }
-                </select>
-            </div>
-            <div className='date'>
-                <input type="date" placeholder="Choose date" /*onFocus="(this.type='date')"*/ />
-            </div>
-            <div className='price'>
-                <label htmlFor="price">Price from 0 to 600</label>
-                <input type="range" id="price" name="price" min="0" max="600" />
-            </div>
-        </div>
+
+                        ))}
+                    </select>
+                </div>
+                <div className='date'>
+                    <input type="date" placeholder="Choose date" /*onFocus="(this.type='date')"*/ />
+                </div>
+                <div className='price'>
+                    <label htmlFor="price">Price from 0 to 600</label>
+                    <input type="range" id="price" name="price" min="0" max="600" />
+                </div>
+            </div >
+        </>
     )
 }
 
