@@ -1,11 +1,13 @@
 import React from "react";
 import "./TermsConditions.css";
 import Footerdetail from "../../components/Footerdetail/Footerdetail";
-
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 function TermsConditions() {
   return (
     <div className="gtermsheaderfoot">
-      <div>
+      <Header />
+      <div className="hbf">
         <div className="header">
           <h3>Terms and Conditions</h3>{" "}
         </div>
@@ -75,6 +77,7 @@ function TermsConditions() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -31,17 +31,17 @@ function Footer() {
             <a href="">About us</a>
           </p>
           <p>
-            <a href="">Point of Sales</a>
+            <a href="">Terms and Conditions</a>
           </p>
           <p>
-            <a href="">Venues</a>
+            <a href="">Refund and exchange</a>
           </p>
           <p>
             <a href="contacts">Contacts</a>
           </p>
         </div>
         <div className="footer-col-4">
-          <p className="bold">Security</p>
+          <p className="bold">Privacy Policy</p>
           <p>
             All payments are protected by 3D Secure from Visa, Visa Electron,
             Maestro and MasterCard

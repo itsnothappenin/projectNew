@@ -25,21 +25,23 @@ function NewsCards() {
       {items?.map((item) => {
         return <NewsCard key={item._id} item={item} />;
       })}
-
-      <button
-        onClick={() => {
-          setSkip((s) => s - limit);
-        }}
-      >
-        Prev
-      </button>
-      <button
-        onClick={() => {
-          setSkip((s) => s + limit);
-        }}
-      >
-        Next
-      </button>
+      <div className="pr-n-btn">
+        <button
+          className=""
+          onClick={() => {
+            setSkip((s) => s - limit);
+          }}
+        >
+          Previous
+        </button>
+        <button
+          onClick={() => {
+            setSkip((s) => s + limit);
+          }}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 }
