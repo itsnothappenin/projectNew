@@ -23,7 +23,7 @@
 }
 
 .events-bottom button:hover {
-    background-color: rgb(84, 207, 84);
+    background-color: #9fedd7;
     cursor: pointer;
     transition: all .1s ease-in-out
 }

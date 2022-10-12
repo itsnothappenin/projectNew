@@ -48,7 +48,7 @@ function Footer() {
           </p>
         </div>
       </div>
-      <div className="footer-part-2">
+      <div className="footer-part-iki">
         <p>COPYRIGHT 2022 © ALL RIGHTS RESERVED. DESIGN BY IATC TEAM.</p>
       </div>
     </div>

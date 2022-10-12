@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import axios, { Axios } from 'axios'
 import { toast, Toaster } from 'react-hot-toast'
 import { useEffect } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 function Login() {
 
     const [email, setEmail] = useState('')
@@ -13,6 +13,7 @@ function Login() {
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
     const [users, setUsers] = useState([]);
+    const navigate = useNavigate();
     useEffect(() => {
         axios.get("http://localhost:8080/users")
             .then(res => setUsers(res.data))
@@ -28,15 +29,19 @@ function Login() {
                 password: password
             }
         }).then(res => {
+            console.log(res)
             if (res.status == 200) {
-                toast.success("Welcome")
-                window.location.href("http://localhost:3000/")
-            }
-            else if (res.status == 401) {
-                toast.error("Something went wrong")
-            }
-        });
+                setInterval(() => {
+                    navigate("/")
 
+                }, 3000);
+                toast.success("Welcome !")
+            }
+            else {
+            }
+        }).catch(err => {
+            toast.error("invalid email or password")
+        })
     }
 
     return (
@@ -44,6 +49,7 @@ function Login() {
             <div className="loginPage">
                 <div className="part1">
                     <form onSubmit={submitHandler} className='form'>
+                        <Link to="/"><button></button></Link>
                         <h1>Welcome back!</h1>
                         <label className='littletext' htmlFor="email">Email</label>
                         <input required type="email" className='area' value={email} name="email" onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" />
@@ -54,10 +60,9 @@ function Login() {
                             <label className='littletext' htmlFor="rememberMe"> Remember for 30 days</label>
                             <span><a className='littletext' href="#">Forgot password</a></span>
                         </div>
-                        <button className="signin" onClick={(e) => submitHandler(e)}>Sign in</button>
-                        <button className='area'><p className='littletext'>Sign in with Google</p></button>
+                        <button className="signinButton" onClick={(e) => submitHandler(e)}>Sign in</button>
                         <div className='formBottom'>
-                            <p>Don't have an account?</p>
+                            <p className='okda'>Don't have an account?</p>
                             <Link to="/register">
                                 Sign up!
                             </Link>

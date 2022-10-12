@@ -23,14 +23,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/events" element={<Eventspage />} />
-          <Route path="/events/:id" element={<EventDetail />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/news" element={<News />} />
+          <Route path="/events" element={<Eventspage />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/support" element={<Support />} />
@@ -38,12 +34,15 @@ function App() {
           <Route path="/termsconditions" element={<TermsConditions />} />
           <Route path="/refundExchange" element={<RefundExchange />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          {/* <Route path={`/events/${event._id}`} element={<EventDetail />} /> */}
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/eticket" element={<Eticket />} />
           <Route path="/News" element={<News />} />
           <Route path="/News/:id" element={<NewsDetails />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+        </Routes >
+      </BrowserRouter >
     </div>
   );
 }

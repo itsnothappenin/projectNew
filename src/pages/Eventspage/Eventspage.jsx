@@ -1,3 +1,5 @@
+import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
 import Events from '../../components/Main/Eventspage/Events/Events';
 import Filtering from '../../components/Main/Eventspage/Filtering/Filtering';
 import './Eventspage.css'
@@ -6,11 +8,13 @@ import './Eventspage.css'
 function Eventspage() {
     return (
         <>
-            <div className='title'>
+            <Header />
+            <div className='eventspage_title'>
                 <h1>All Events</h1>
             </div>
-            <Filtering />
+            {/* <Filtering /> */}
             <Events />
+            <Footer />
         </>
 
 
