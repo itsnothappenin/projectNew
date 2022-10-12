@@ -21,7 +21,7 @@ function Cards() {
         <p className="p1">RECIEVE TICKETS</p>
         <p className="p2">via email or right at your door</p>
       </div>
-      <div>poxs</div>
+      <div>Guten Tag</div>
     </div>
   );
 }
