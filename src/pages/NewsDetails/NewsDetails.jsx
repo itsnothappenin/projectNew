@@ -7,6 +7,8 @@ import Blog from "../../components/News/Blog/Blog";
 import { toast, Toaster } from "react-hot-toast";
 import "./NewsDetails.css";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 function NewsDetails() {
   const [news, setNews] = useState([]);
   const navigator = useNavigate();
@@ -37,6 +39,7 @@ function NewsDetails() {
 
   return (
     <div className="cardDetail-comment">
+      <Header />
       <Blog />
       <div className="cardDetail">
         {currentNews._id}
@@ -136,6 +139,7 @@ function NewsDetails() {
         </div>
       </div>
       <Toaster />
+      <Footer />
     </div>
   );
 }

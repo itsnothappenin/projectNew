@@ -18,6 +18,8 @@ import TermsConditions from "./pages/TermsConditions/TermsConditions";
 import RefundExchange from "./pages/RefundExchange/RefundExchange";
 import Privacy from "./pages/Privacy/Privacy";
 import Eticket from "./pages/Eticket/Eticket";
+import Favorites from "./pages/Favorites/Favorites";
+import Basket from "./pages/Basket/Basket";
 
 function App() {
   return (
@@ -41,8 +43,10 @@ function App() {
           <Route path="/eticket" element={<Eticket />} />
           <Route path="/News" element={<News />} />
           <Route path="/News/:id" element={<NewsDetails />} />
-        </Routes >
-      </BrowserRouter >
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/cart" element={<Basket />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
