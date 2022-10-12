@@ -34,11 +34,14 @@ function App() {
           <Route path="/termsconditions" element={<TermsConditions />} />
           <Route path="/refundExchange" element={<RefundExchange />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          {/* <Route path={`/events/${event._id}`} element={<EventDetail />} /> */}
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/eticket" element={<Eticket />} />
           <Route path="/News" element={<News />} />
           <Route path="/News/:id" element={<NewsDetails />} />
         </Routes >
-        <Footer />
       </BrowserRouter >
     </div>
   );

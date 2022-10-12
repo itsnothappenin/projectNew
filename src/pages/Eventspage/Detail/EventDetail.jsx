@@ -12,9 +12,9 @@ const EventDetail = () => {
     let id = useParams()
     useEffect(() => {
         axios.get("http://localhost:8080/events")
-            .then(res => {
+            .then((res) => {
                 const i = id.id
-                setEvent(res.data.data.find(x => x._id == i))
+                setEvent(res.data.data.find((x) => x._id == i))
             })
     }, [])
 

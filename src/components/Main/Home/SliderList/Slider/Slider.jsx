@@ -5,7 +5,13 @@ const Slider = (props) => {
     return (
         <div>
             {
-              <h1>{slider._id}</h1>
+                <div className='slider_1'>
+                    <img src={slider.thumbnail} alt="" />
+                    <h3>{slider.title}</h3>
+                    <h4>{slider.description}</h4>
+                    <h5>{slider.createdAt}</h5>
+                    <h5>{slider.updatedAt}</h5>
+                </div>
             }
         </div>
     )

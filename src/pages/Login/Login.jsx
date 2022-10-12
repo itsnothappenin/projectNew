@@ -49,6 +49,7 @@ function Login() {
             <div className="loginPage">
                 <div className="part1">
                     <form onSubmit={submitHandler} className='form'>
+                        <Link to="/"><button></button></Link>
                         <h1>Welcome back!</h1>
                         <label className='littletext' htmlFor="email">Email</label>
                         <input required type="email" className='area' value={email} name="email" onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" />
@@ -59,10 +60,9 @@ function Login() {
                             <label className='littletext' htmlFor="rememberMe"> Remember for 30 days</label>
                             <span><a className='littletext' href="#">Forgot password</a></span>
                         </div>
-                        <button className="signin" onClick={(e) => submitHandler(e)}>Sign in</button>
-                        <button className='area'><p className='littletext'>Sign in with Google</p></button>
+                        <button className="signinButton" onClick={(e) => submitHandler(e)}>Sign in</button>
                         <div className='formBottom'>
-                            <p>Don't have an account?</p>
+                            <p className='okda'>Don't have an account?</p>
                             <Link to="/register">
                                 Sign up!
                             </Link>

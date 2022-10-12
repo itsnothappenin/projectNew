@@ -17,6 +17,7 @@ body {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    justify-content: space-between;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;

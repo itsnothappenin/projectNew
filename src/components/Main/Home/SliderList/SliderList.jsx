@@ -20,7 +20,6 @@ function SliderList() {
             .then(res => res.json())
             .then(function (data) {
                 setSwipers(data.data)
-                console.log("sakla")
             })
     }, [])
     return (
@@ -42,7 +41,12 @@ function SliderList() {
                 <SwiperSlide>
                     {
                         swipers.map(swiper => {
-                            return (<Slider key={swiper._id} slider={swiper} />)
+                            return (
+                                <>
+                                    <Slider key={swiper._id} slider={swiper} />
+                                   
+                                </>
+                            )
                         })
                     }
                 </SwiperSlide>

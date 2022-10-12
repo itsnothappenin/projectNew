@@ -32,6 +32,7 @@ const Register = () => {
         <>
             <div className="regPage">
                 <div className="part1">
+                <Link to="/"><button></button></Link>
                     <form className='form'>
                         <h1>Join us now!</h1>
                         <div className="names">

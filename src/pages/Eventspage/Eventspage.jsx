@@ -9,10 +9,10 @@ function Eventspage() {
     return (
         <>
             <Header />
-            <div className='title'>
+            <div className='eventspage_title'>
                 <h1>All Events</h1>
             </div>
-            <Filtering />
+            {/* <Filtering /> */}
             <Events />
             <Footer />
         </>
