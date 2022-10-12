@@ -36,11 +36,11 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* <Route path={`/events/${event._id}`} element={<EventDetail />} /> */}
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/eticket" element={<Eticket />} />
           <Route path="/News" element={<News />} />
           <Route path="/News/:id" element={<NewsDetails />} />
+          <Route path="/Events/:id" element={<EventDetail />} />
         </Routes >
       </BrowserRouter >
     </div>

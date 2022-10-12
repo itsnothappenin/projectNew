@@ -47,9 +47,9 @@ function Login() {
     return (
         <>
             <div className="loginPage">
-                <div className="part1">
+                <div className="part1-login">
                     <form onSubmit={submitHandler} className='form'>
-                        <Link to="/"><button></button></Link>
+                        <Link to="/"><button className='arxaya'></button></Link>
                         <h1>Welcome back!</h1>
                         <label className='littletext' htmlFor="email">Email</label>
                         <input required type="email" className='area' value={email} name="email" onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" />
@@ -69,7 +69,7 @@ function Login() {
                         </div>
                     </form>
                 </div>
-                <div className="part2">
+                <div className="part2-login">
                     <div className='image'>
                         <img src={concert} />
                     </div>

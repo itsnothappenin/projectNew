@@ -31,39 +31,39 @@ const Register = () => {
     return (
         <>
             <div className="regPage">
-                <div className="part1">
+                <div className="part1-reg">
                 <Link to="/"><button></button></Link>
                     <form className='form'>
                         <h1>Join us now!</h1>
                         <div className="names">
                             <div className='firstName'>
                                 <label className='littletext' htmlFor="firstName">First Name</label>
-                                <input required type="text" className='area' name="firstName" placeholder="First Name..." onChange={(e) => {
+                                <input required type="text" className='area' name="firstName" placeholder="First Name" onChange={(e) => {
                                     setName(e.target.value)
                                 }} />
                             </div>
                             <div className='lastName'>
                                 <label className='littletext' htmlFor="lastName">Last Name</label>
-                                <input required type="text" className='area' name="lastName" placeholder="Last Name..." onChange={(e) => {
+                                <input required type="text" className='area' name="lastName" placeholder="Last Name" onChange={(e) => {
                                     setsurName(e.target.value)
                                 }} />
                             </div>
 
                         </div>
                         <label className='littletext' htmlFor="email">Email</label>
-                        <input required type="email" className='area' name="email" placeholder="Enter your email..." onChange={(e) => {
+                        <input required type="email" className='area' name="email" placeholder="Your email" onChange={(e) => {
                             setEmail(e.target.value)
                         }} />
-                        <label className='littletext' htmlFor="phone">Number</label>
-                        <input required type="text" className='area' name="phone" placeholder="Enter your  number..." onChange={(e) => {
+                        <label className='littletext' htmlFor="phone">Phone number</label>
+                        <input required type="text" className='area' name="phone" placeholder="Your number" onChange={(e) => {
                             setPhone(e.target.value)
                         }} />
                         <label className='littletext' htmlFor="password">Password</label>
-                        <input required type="password" className='area' name="password" placeholder="Enter your password..." onChange={(e) => {
+                        <input required type="password" className='area' name="password" placeholder="Your password" onChange={(e) => {
                             setPassword(e.target.value)
                         }} />
                         <label className='littletext' htmlFor="password">Confirm Password</label>
-                        <input required type="password" className='area' name="password" placeholder="Enter your password again..." onChange={(e) => {
+                        <input required type="password" className='area' name="password" placeholder="Retype password" onChange={(e) => {
                             setConfirm(e.target.value)
                         }} />
                         <button className="signUp" onClick={handleRegister}>Sign up</button>
@@ -73,7 +73,7 @@ const Register = () => {
                         </div>
                     </form>
                 </div>
-                <div className="part2">
+                <div className="part2-reg">
                     <div className='image'>
                         <img src={concert} />
                     </div>
