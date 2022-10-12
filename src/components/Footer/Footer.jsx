@@ -13,10 +13,10 @@ function Footer() {
         <div className="footer-col-2">
           <p className="bold">Information</p>
           <p>
-            <a href="faq">FAQ</a>
+            <a href="/faq">FAQ</a>
           </p>
           <p>
-            <a href="support">Support</a>
+            <a href="/support">Support</a>
           </p>
           <p>
             <a href="termsconditions">Terms and Conditions</a>
@@ -28,20 +28,20 @@ function Footer() {
         <div className="footer-col-3">
           <p className="bold">TicketBox</p>
           <p>
-            <a href="">About us</a>
+            <a href="/about">About us</a>
+          </p>
+          {/* <p>
+            <a href="/privacy">Privacy policy</a>
+          </p> */}
+          <p>
+            <a href="/refund">Refund and exchange</a>
           </p>
           <p>
-            <a href="">Point of Sales</a>
-          </p>
-          <p>
-            <a href="">Venues</a>
-          </p>
-          <p>
-            <a href="contacts">Contacts</a>
+            <a href="/contacts">Contacts</a>
           </p>
         </div>
         <div className="footer-col-4">
-          <p className="bold">Security</p>
+          <p className="bold">Privacy Policy</p>
           <p>
             All payments are protected by 3D Secure from Visa, Visa Electron,
             Maestro and MasterCard

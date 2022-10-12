@@ -2,7 +2,8 @@ import React from "react";
 import "./FAQ.css";
 import { useState } from "react";
 import Footerdetail from "../../components/Footerdetail/Footerdetail";
-
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 function FAQ() {
   const [selected, setSelected] = useState(null);
 
@@ -14,23 +15,27 @@ function FAQ() {
   };
 
   return (
-    <div className="wrapper">
-      <div className="accordion">
-        {data.map((item, i) => (
-          <div className="item" key={i}>
-            <div className="title" onClick={() => toggle(i)}>
-              <h5>{item.question}</h5>
-              <span>{selected === i ? "-" : "+"}</span>
+    <div>
+      <Header />
+      <div className="wrapper">
+        <div className="accordion">
+          {data.map((item, i) => (
+            <div className="item" key={i}>
+              <div className="title" onClick={() => toggle(i)}>
+                <h5>{item.question}</h5>
+                <span>{selected === i ? "-" : "+"}</span>
+              </div>
+              <div className={selected === i ? "content show" : "content"}>
+                {item.answer}
+              </div>
             </div>
-            <div className={selected === i ? "content show" : "content"}>
-              {item.answer}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="footerdetail">
+          <Footerdetail />
+        </div>
       </div>
-      <div className="footerdetail">
-        <Footerdetail />
-      </div>
+      <Footer />
     </div>
   );
 }
