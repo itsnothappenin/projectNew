@@ -18,8 +18,6 @@ import TermsConditions from "./pages/TermsConditions/TermsConditions";
 import RefundExchange from "./pages/RefundExchange/RefundExchange";
 import Privacy from "./pages/Privacy/Privacy";
 import Eticket from "./pages/Eticket/Eticket";
-import Favorites from "./pages/Favorites/Favorites";
-import Basket from "./pages/Basket/Basket";
 
 function App() {
   return (
@@ -38,15 +36,13 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* <Route path={`/events/${event._id}`} element={<EventDetail />} /> */}
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/eticket" element={<Eticket />} />
           <Route path="/News" element={<News />} />
           <Route path="/News/:id" element={<NewsDetails />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/cart" element={<Basket />} />
-        </Routes>
-      </BrowserRouter>
+          <Route path="/Events/:id" element={<EventDetail />} />
+        </Routes >
+      </BrowserRouter >
     </div>
   );
 }
