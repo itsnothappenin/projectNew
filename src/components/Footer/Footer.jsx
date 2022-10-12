@@ -1,5 +1,5 @@
-import './Footer.css'
-import logo from './logo.png'
+import "./Footer.css";
+import logo from "./logo.png";
 
 function Footer() {
   return (
@@ -13,16 +13,16 @@ function Footer() {
         <div className="footer-col-2">
           <p className="bold">Information</p>
           <p>
-            <a href="#">FAQ</a>
+            <a href="faq">FAQ</a>
           </p>
           <p>
-            <a href="#">Support</a>
+            <a href="support">Support</a>
           </p>
           <p>
-            <a href="#">Terms and Conditions</a>
+            <a href="termsconditions">Terms and Conditions</a>
           </p>
           <p>
-            <a href="#">Privacy Policy</a>
+            <a href="privacy">Privacy Policy</a>
           </p>
         </div>
         <div className="footer-col-3">
@@ -37,7 +37,7 @@ function Footer() {
             <a href="">Venues</a>
           </p>
           <p>
-            <a href="">Contacts</a>
+            <a href="contacts">Contacts</a>
           </p>
         </div>
         <div className="footer-col-4">
@@ -52,7 +52,7 @@ function Footer() {
         <p>COPYRIGHT 2022 © ALL RIGHTS RESERVED. DESIGN BY IATC TEAM.</p>
       </div>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
