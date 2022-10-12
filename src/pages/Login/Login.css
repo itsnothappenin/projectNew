@@ -7,14 +7,14 @@
     display: flex;
 }
 
-.part1 {
+.part1-login {
     box-sizing: border-box;
     padding: 50px;
     width: 50%;
     height: 100vh;
 }
 
-.part2 {
+.part2-login {
     width: 50%;
 }
 
@@ -96,7 +96,7 @@ button:hover {
     transition: all .2s ease-in-out;
 }
 
-.part2 {
+.part2-login {
     width: 50%;
 }
 
@@ -104,7 +104,7 @@ button:hover {
     height: 100%;
 }
 
-.part2 img {
+.part2-login img {
     height: 99.5%;
     width: 100%;
     object-fit: fill;
@@ -113,4 +113,12 @@ button:hover {
 
 .okda {
     margin: 0
+}
+
+.arxaya {
+    background-color: white;
+    color: black;
+    border: 2px solid #000000; /* Green */
+    width: 50px;
+    height: 20px;
 }
