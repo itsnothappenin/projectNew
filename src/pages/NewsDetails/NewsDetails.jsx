@@ -9,7 +9,7 @@ import "./NewsDetails.css";
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import arrowLeft from './arrleft.svg'
+import arrowLeft from "./arrleft.svg";
 import { Link } from "react-router-dom";
 
 function NewsDetails() {
@@ -45,8 +45,12 @@ function NewsDetails() {
       <Header />
       <Blog />
       <div className="cardDetail">
-      <Link to="/news"><button className="backNews"><img className="arrLeft" src={arrowLeft} alt="" /></button></Link>
-      <br />
+        <Link to="/news">
+          <button className="backNews">
+            <img className="arrLeft" src={arrowLeft} alt="" />
+          </button>
+        </Link>
+        <br />
         <div className="cardDetail-Image-container">
           <img src={currentNews.newsimage} alt="img" />
         </div>
@@ -58,13 +62,13 @@ function NewsDetails() {
             <div className="cardDetail-Date">
               <p>{currentNews.createdAt}</p>
             </div>
-            <div className="cardDetail-By">
+            {/* <div className="cardDetail-By">
               <p>By Dawnthemes</p>
-            </div>
+            </div> */}
 
-            <div className="cardDetail-Categories">
+            {/* <div className="cardDetail-Categories">
               <p>Exhibitions</p>
-            </div>
+            </div> */}
           </div>
           <hr />
           <div className="carddetail-Text">
@@ -91,13 +95,13 @@ function NewsDetails() {
           <div className="previousPost">
             <button className="previousPost-btn" onClick={prevHandler}>
               <p>previous post </p>
-              <h5>NISI CRAS VEL APTENT DICTUM SEM SENECTUS VENENATIS</h5>
+              <h5>Qürbətdən gələn məktublar</h5>
             </button>
           </div>
           <div className="nextPost">
             <button className="nextPost-btn" onClick={nextHandler}>
               <p>next post </p>
-              <h5>NISI CRAS VEL APTENT DICTUM SEM SENECTUS VENENATIS</h5>
+              <h5>Ana</h5>
             </button>
           </div>
         </div>
