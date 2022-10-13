@@ -5,6 +5,8 @@ import Footer from "../../components/Footer/Footer"
 import NewsCards from "../../components/News/NewsCards/NewsCards";
 import "./News.css";
 
+
+
 function News() {
   return (
     <div>

@@ -1,7 +1,8 @@
 .event__wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 30px;
+    justify-content: space-evenly;
+    margin: 10px;
+    width: 100%;
     flex-wrap: wrap;
 }
