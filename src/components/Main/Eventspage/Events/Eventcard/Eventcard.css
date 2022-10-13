@@ -4,8 +4,10 @@
     padding: 30px;
     transition: 0.5s;
     box-shadow: -1px 3px 10px 1px #000;
-    margin: 40px;
+    margin-right: 100px;
     color: black;
+    width: 100%;
+    margin-bottom: 80px;
 }
 
 .event__card:hover, .event__card:focus, .event__card:active {
@@ -15,5 +17,30 @@
     color: black;
 }
 
+.damla {
+    width: 100px;
+}
+
+.eventTitle {
+    margin: 15px 0;
+}
+
+.eventLoc {
+    margin-bottom: 15px;;
+}
+
+.startTime {
+    margin-top: 10px;
+}
+
+.endTime {
+    margin-bottom: 15px;
+}
+
 .event__card__body {
+}
+
+.eventTitle, .startTime, .eventLoc, .endTime, .eventPrice a {
+    text-decoration: none;
+
 }

@@ -9,6 +9,9 @@ import "./NewsDetails.css";
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import arrowLeft from './arrleft.svg'
+import { Link } from "react-router-dom";
+
 function NewsDetails() {
   const [news, setNews] = useState([]);
   const navigator = useNavigate();
@@ -42,7 +45,8 @@ function NewsDetails() {
       <Header />
       <Blog />
       <div className="cardDetail">
-        {currentNews._id}
+      <Link to="/news"><button className="backNews"><img className="arrLeft" src={arrowLeft} alt="" /></button></Link>
+      <br />
         <div className="cardDetail-Image-container">
           <img src={currentNews.newsimage} alt="img" />
         </div>

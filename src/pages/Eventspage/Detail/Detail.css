@@ -1,0 +1,68 @@
+.event__card__detail {
+    border: none;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: -1px 3px 10px 1px #000;
+    margin: 60px;
+    color: black;
+}
+
+.damlaDetail {
+    width: 40%;
+}
+
+.event__card__body__det {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eventTitleDet, .eventLocDet, .startTimeDet, .endTimeDet, .eventPriceDet {
+    margin-bottom: 15px;
+}
+
+.eventTitleDet {
+    margin-top: 25px;
+}
+
+.det2 {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.azzar {
+    width: 30px;
+}
+
+.but {
+    padding: 30px;
+    border: none;
+    box-shadow: -1px 3px 10px 1px rgb(3, 224, 51);
+    background-color: rgb(0, 139, 30);
+    color: white;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.but:hover {
+    background-color:  rgb(0, 226, 49);
+}
+
+.arrLeft {
+    width: 20px;;
+}
+
+.back {
+    border: none;
+    border-radius: 10px;
+    width: 5%;
+    text-align: center;
+    margin-left: 60px;
+    margin-top: 40px;
+    padding: 10px;
+    box-shadow: -1px 3px 10px 1px #000 ;
+}
