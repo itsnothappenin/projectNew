@@ -1,13 +1,12 @@
 .event__card{
     border: none;
     border-radius: 20px;
-    padding: 30px;
     transition: 0.5s;
     box-shadow: -1px 3px 10px 1px #000;
-    margin-right: 100px;
     color: black;
-    width: 100%;
-    margin-bottom: 80px;
+    width: 400px;
+    margin-bottom: 40px;
+    height: 80%;
 }
 
 .event__card:hover, .event__card:focus, .event__card:active {
@@ -37,10 +36,37 @@
     margin-bottom: 15px;
 }
 
-.event__card__body {
+
+/* .eventTitle, .startTime, .eventLoc, .endTime, .eventPrice  {
+    overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+    background-color: red;
+} */
+
+.event__card__image {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
 }
 
-.eventTitle, .startTime, .eventLoc, .endTime, .eventPrice a {
-    text-decoration: none;
+.event__card__body {
+    padding: 20px;
 
+}
+
+.eventTitle {
+    font-size: 24px;
+}
+
+.eventLoc, .startTime, .endTime {
+    font-size: 20px;
+}
+
+.eventPrice {
+    font-size: 24px;
+}
+
+.ok {
+    height: 50%;
 }

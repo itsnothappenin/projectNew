@@ -5,6 +5,7 @@ import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import bookmark from './../SliderList2/img/bookmark.svg'
 import eventsImg1 from './../SliderList2/img/event1.jpg'
 import eventsImg from './../SliderList2/img/event.jpg'
+import Moment from 'moment/moment';
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -42,7 +43,7 @@ function SliderList2() {
                     loop={true}
                     // loopFillGroupWithBlank={true}
                     autoplay={{
-                        delay: 5000,
+                        delay: 4000,
                         disableOnInteraction: false,
                     }}
                     navigation={true}
@@ -63,14 +64,15 @@ function SliderList2() {
                             <div>
                                 {
                                     <div className='slider_2'>
-                                        {/* <img className='sliderImage2' src={slider2.thumbnail} alt="" /> */}
                                         <div className='imgAndTitle2'>
-                                            <img className='sliderImage2' src={eventsImg} alt="" />
+                                            <div><img className='sliderImage2' src={slider2.image} alt="" /></div>
                                             <h3 className='sliderTitle2' >{slider2.title}</h3>
                                         </div>
-                                        <h4 className='sliderDescription2'>{slider2.description}</h4>
-                                        <h5 className='sliderDate2'>Created at: {slider2.createdAt}</h5>
-                                        <h5 className='sliderDate2'>Updated at: {slider2.updatedAt}</h5>
+                                        <div className='slider2part2'>
+                                            <h4 className='sliderDescription2'>{slider2.description}</h4>
+                                            <h5 className='sliderDate2'>Created at: {Moment(slider2.createdAt).format('DD-MM-YYYY, hh:mm')}</h5>
+                                            <h5 className='sliderDate2'>Updated at: {Moment(slider2.createdAt).format('DD-MM-YYYY, hh:mm')}</h5>
+                                        </div>
                                     </div>
                                 }
                             </div>
