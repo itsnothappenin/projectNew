@@ -31,6 +31,7 @@
   margin-top: 70px;
   margin-right: 150px;
   margin-bottom: 70px;
+  /* height: 600px; */
 
   justify-content: space-between;
 }
@@ -46,8 +47,8 @@
 
 .image-container img {
   overflow: hidden;
-  height: 200px;
-  width: 300px;
+  height: 250px;
+  width: 400px;
 }
 
 .card-content {
@@ -57,6 +58,7 @@
 
 .card-title {
   margin-bottom: 0.5rem;
+  flex: wrap;
 }
 
 .btn {
@@ -78,4 +80,12 @@
 a {
   color: #ffff;
   font-weight: bold;
+}
+
+.text {
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

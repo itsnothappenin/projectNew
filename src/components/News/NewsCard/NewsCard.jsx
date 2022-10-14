@@ -8,7 +8,7 @@ const NewsCard = ({ item }) => {
     <Link to={`/news/${item._id}`} className="linkcard">
       <div className="card">
         <div className="image-container">
-          {/* <img src={item.thumbnail} alt="" /> */}
+          <img src={item.newsImage} alt="" />
         </div>
         <div className="card-content">
           <div className="card-title">
