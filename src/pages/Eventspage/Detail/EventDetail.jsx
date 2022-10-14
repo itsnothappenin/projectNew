@@ -10,6 +10,8 @@ import './Detail.css'
 import damla from './damla.jpg'
 import basket from'./cart.svg'
 import arrowLeft from './arrleft.svg'
+import Moment from "moment/moment";
+
 
 const EventDetail = () => {
   const [events, setEvents] = useState([]);
@@ -28,14 +30,14 @@ const EventDetail = () => {
       <Link to="/events"><button className="back"><img className="arrLeft" src={arrowLeft} alt="" /></button></Link>
       <div className="event__card__detail">
         <div className="event__card__image__det">
-          <img className="damlaDetail" src={damla} alt="" />
+          <img className='detImage' src={event.eventImage} alt="" />
         </div>
         <div className="event__card__body__det">
           <div className="det1">
             <h1 className="eventTitleDet">{event.title}</h1>
             <h2 className="eventLocDet">{event.location}</h2>
-            <h4 className="startTimeDet"> Başlama tarixi: {event.startTime}</h4>
-            <h4 className="endTimeDet">Bitmə tarixi: {event.endTime}</h4>
+            <h4 className="startTimeDet"> Başlama tarixi: {Moment(event.startTime).format('DD-MM-YYYY, hh:mm')}</h4>
+            <h4 className="endTimeDet">Bitmə tarixi: {Moment(event.endTime).format('DD-MM-YYYY, hh:mm')}</h4>
             <h3 className="eventPriceDet">Qiymət: {event.price}AZN</h3>
           </div>
           <div className="det2">

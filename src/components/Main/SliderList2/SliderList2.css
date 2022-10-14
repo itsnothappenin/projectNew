@@ -23,24 +23,26 @@ body {
 
 .imgAndTitle2 {
   /* position: relative; */
-  width: 293px;
-  margin: 20px auto;
+  /* width: 50%; */
+  margin: 20px 0;
   display: flex;
   justify-content: space-between;
 }
 
 .sliderImage2 {
   position: relative;
-  max-width: 455px;
+  /* max-width: 455px; */
   /* max-height: 245px; */
   /* display: flex;
     justify-content: space-between; */
   margin-top: 10px;
   margin-bottom: 1px;
+  width: 400px;
 }
 
 .sliderTitle2 {
-  width: 455px;
+  /* width: 455px; */
+  width: 400px;
   position: absolute;
   background-color: #00000080;
   color: #ffffff;
@@ -50,7 +52,7 @@ body {
   padding: 12px 30px;
   /* display: flex;
     align-items: flex-end; */
-  top: 255px;
+  top: 360px;
   line-height: 55px;
 }
 
@@ -60,6 +62,7 @@ body {
   color: #333333;
   font-weight: bolder;
   margin-bottom: 15px;
+  text-align: justify;
 }
 
 .sliderDate2 {

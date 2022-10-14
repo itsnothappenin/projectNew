@@ -7,7 +7,7 @@ import eventsImg1 from './Slider/img/event1.jpg'
 import eventsImg from './Slider/img/event.jpg'
 import "swiper/css";
 import "swiper/css/pagination";
-
+import Moment from 'moment/moment';
 import "./SliderList.css";
 import calendar from './Slider/img/calendar.svg'
 
@@ -35,7 +35,7 @@ function SliderList() {
             </div>
             {
                 <Swiper
-                    spaceBetween={15}
+                    spaceBetween={10}
                     slidesPerView={2}
                     slidesPerGroup={1}
                     // direction={'horizontal'}
@@ -46,7 +46,7 @@ function SliderList() {
                     }}
                     // scrollbar={{draggable:true}}
                     autoplay={{
-                        delay: 5000,
+                        delay: 3000,
                         disableOnInteraction: false,
                     }}
                 >
@@ -67,15 +67,17 @@ function SliderList() {
                             <div>
                                 {
                                     <div className='slider_1'>
-                                        {/* <img className='sliderImage' src={slider.thumbnail} alt="" /> */}
                                         <div className='imgAndTitle'>
-                                            <img className='sliderImage' src={eventsImg} alt="" />
+                                            <div><img className='sliderImage' src={slider.image} alt="" /></div>
                                             <h3 className='sliderTitle'>{slider.title}</h3>
                                         </div>
+                                        <div className='description'>
 
-                                        <h4 className='sliderDescription'>{slider.description}</h4>
-                                        <span className='sliderDate'>Created at: {slider.createdAt}</span>
-                                        <span className='sliderDate'>Updated at: {slider.updatedAt}</span>
+                                            <h4 className='sliderDescription'>{slider.description}</h4>
+                                            <span className='sliderDate'>Başlama tarixi: {Moment(slider.createdAt).format('DD-MM-YYYY, hh:mm')}</span>
+                                            <span className='sliderDate'>Bitmə tarixi: {Moment(slider.updatedAt).format('DD-MM-YYYY, hh:mm')}</span>
+
+                                        </div>
                                     </div>
                                 }
                             </div>
