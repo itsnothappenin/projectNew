@@ -6,6 +6,9 @@ import axios, { Axios } from 'axios'
 import { toast, Toaster } from 'react-hot-toast'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import arrowLeft from './arrleft.svg'
+
+
 function Login() {
 
     const [email, setEmail] = useState('')
@@ -49,7 +52,7 @@ function Login() {
             <div className="loginPage">
                 <div className="part1-login">
                     <form onSubmit={submitHandler} className='form'>
-                        <Link to="/"><button className='arxaya'></button></Link>
+                        <Link to="/"><button className="backLogin"><img className="arrLeft" src={arrowLeft} alt="" /></button></Link>
                         <h1>Welcome back!</h1>
                         <label className='littletext' htmlFor="email">Email</label>
                         <input required type="email" className='area' value={email} name="email" onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" />
