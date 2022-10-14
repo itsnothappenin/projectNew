@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato",sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #f1f1f1;
+    color: #545454;
+}
+.imgAndTitle{
+    /* position: relative; */
+    width: 455px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-between ;
+}
+.sliderImage{
+    position: relative;
+    max-width: 455px;
+    /* max-height: 245px; */
+    /* display: flex;
+    justify-content: space-between; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.sliderTitle{
+    width: 455px;
+    position: absolute;
+    background-color: #00000080;
+    color: #ffffff;
+    font-family: "Lato";
+    font-weight: 300px;
+    font-size: 14px;
+    padding: 12px 30px;
+    /* display: flex;
+    align-items: flex-end; */
+    top: 255px;
+}
+
