@@ -6,7 +6,7 @@ function Blog() {
   return (
     <div className="Blog">
       <h1>Blog</h1>
-      <a>
+      <a href="/">
         <IoHomeOutline /> Home <AiOutlineRight />
       </a>
     </div>

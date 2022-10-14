@@ -52,7 +52,7 @@ function NewsDetails() {
         </Link>
         <br />
         <div className="cardDetail-Image-container">
-          <img src={currentNews.newsimage} alt="img" />
+          <img src={currentNews.newsImage} alt="img" />
         </div>
         <div className="cardDetail-content">
           <div className="cardDetail-title">
@@ -94,14 +94,14 @@ function NewsDetails() {
         <div className="previousNext">
           <div className="previousPost">
             <button className="previousPost-btn" onClick={prevHandler}>
-              <p>previous post </p>
-              <h5>Qürbətdən gələn məktublar</h5>
+              <h6>previous post </h6>
+              {/* <h5>Qürbətdən gələn məktublar</h5> */}
             </button>
           </div>
           <div className="nextPost">
             <button className="nextPost-btn" onClick={nextHandler}>
-              <p>next post </p>
-              <h5>Ana</h5>
+              <h6>next post</h6>
+              {/* <h5>Ana {setCurrentNews.title}</h5> */}
             </button>
           </div>
         </div>
